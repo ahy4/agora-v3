@@ -298,7 +298,7 @@
         console.log("stream-published")
       })
       // Occurs when the remote stream is added.
-      rtc.client.on("stream-added", function (evt) {  
+      rtc.client.on("stream-added", function (evt) {
         var remoteStream = evt.stream
         var id = remoteStream.getId()
         Toast.info("stream-added uid: " + id)
@@ -413,7 +413,7 @@
           rtc.localStream = AgoraRTC.createStream({
             streamID: rtc.params.uid,
             audio: true,
-            video: true,
+            video: false,
             screen: false,
             microphoneId: option.microphoneId,
             cameraId: option.cameraId
